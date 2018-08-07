@@ -1,0 +1,7 @@
+Spring AOP介绍
+ Aspect：Aspect声明类似于Java中的类声明，在Aspect中包含一些Pointcut及相应的Advice
+ Joint point：表示在程序中明确定义的点，典型的包括方法调用、对类成员的访问，以及异常处理程序块的执行等。spring中Join point只支持方法调用
+ Pointcut：表示一组Joint point,如方法名、参数类型、返回类型等，这些Joint point通过逻辑关系组合起来，它定义了相应的Advice将要发生的地方
+ Advice：Advice定义了在Pointcut里面定义了程序点具体要做的操作。before、around、after来区别实在那个Joint Point之前、之后还是执行前后调用
+ AOP proxy：被代理的Java对象，有AOP框架创建，用来完成上述动作，原理：JDK动态代理或者CGLIB完成
+ Weaving：实现上述切面编程的代码织入，可以在编译时刻，可以在编译时刻（通过AspectJ compiler）也可以在运行时刻，Spring和其他大多数Java框架都是在运行时刻生成代理
